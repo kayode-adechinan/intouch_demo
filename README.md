@@ -1,10 +1,12 @@
 # Demo integration intouch
 
 
+
 ## Comment ça marche
 
 * L'utilisateur de l'api intouch initie une transaction (voir le fichier test_transaction.py)
 * Intouch valide la transaction et appel la fonction de retour de l'utilisateur (voir api.py)
+* toute la doc (voir FONCTIONNEMENT TOUCHPAYAPI.pdf)
 
 ## Comment reproduire ?
 
