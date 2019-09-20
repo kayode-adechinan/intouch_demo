@@ -13,7 +13,7 @@
 * cloner le dépôt
 
 ```bash
-$ git clone 
+$ git clone git@github.com:kayode-adechinan/intouch_demo.git
 ```
 
 * installer les dépendances
@@ -29,6 +29,22 @@ $ pip install flask requests
 ```
 
 ## Comment lancer une transaction
+
+* lancer le serveur dans un terminal
+
+```bash
+$ python api.py
+```
+
+* lancer ngrok pour un test en local
+
+```bash
+$ ngrok http 5000
+```
+
+* Remplacer l'url générer dans le fichier test_transaction.py
+
+* lancer la transaction dans un autre terminal
 
 ```bash
 $ python test_transaction.py

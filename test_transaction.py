@@ -15,7 +15,7 @@ data = {
     },
     "amount": 100,
     "callback":
-        "https://f6b5b4da.ngrok.io/callback",  # url callback (voir api.py)
+        "https://f6b5b4da.ngrok.io/callback",  # url callback à adapter (voir api.py)
     "recipientNumber": "781833456",
     #"serviceCode": "PAIEMENTMARCHANDTIGO"
     #"serviceCode": "SNPAIEMENTMARCHAND_EMONEY"
