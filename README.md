@@ -67,3 +67,32 @@ $ python test_transaction.py
 * PAIEMENTMARCHANDTIGO -> Tigo
 * SNPAIEMENTMARCHAND_EMONEY -> Expresso 
 * PAIEMENTMARCHANDOM -> Orange
+
+## Exemple de jeu de données pour passer une commande
+
+```bash
+{
+    "amount": 100,
+    "callback":
+        "https://1239d192.ngrok.io/transactions",  
+    "recipientNumber": "781833456",
+    "serviceCode": "PAIEMENTMARCHANDOM"  
+}
+```
+
+## Retour de intouch
+
+```bash
+{
+    "details": {
+        "amount": 100.0,
+        "dateTime": 1574436022464,
+        "fees": 1.5,
+        "idFromClient": "e993da62-384b-4ba5-ba8f-294d9e77b421",
+        "idFromGU": "1574436022464",
+        "recipientNumber": "781833456",
+        "serviceCode": "PAIEMENTMARCHANDOM",
+        "status": "INITIATED"
+    }
+}
+```

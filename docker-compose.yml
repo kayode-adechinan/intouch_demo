@@ -3,13 +3,13 @@ services:
   web:
     build: .
     ports:
-      - "5000:5000"
+      - "5151:5000"
   
   mongodb:
     container_name: mongodb
     image: mongo
     ports:
-      - "27017:27017"
+      - "27018:27017"
     restart: always
     #volumes:
     #  - mongo_data:/data/db
