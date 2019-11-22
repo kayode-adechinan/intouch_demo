@@ -50,3 +50,14 @@ $ ngrok http 5000
 $ python test_transaction.py
 ```
 
+## Comment utiliser l'api
+
+* Créer une commande
+```bash
+$ /orders/
+```
+
+* Spécifier un callback
+```bash
+$ /transactions/
+```
