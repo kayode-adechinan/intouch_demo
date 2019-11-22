@@ -12,6 +12,8 @@ db = client['api-database']
 orders_collection = db['orders']
 transactions_collection = db['transactions']
 
+
+
 app = Flask(__name__)
 
 
@@ -22,6 +24,16 @@ def index():
 
 @app.route('/orders', methods=['GET', 'POST'])
 def orders():
+
+    """
+        {
+        "amount": 100,
+        "callback":
+            "https://1239d192.ngrok.io/transactions",  
+        "recipientNumber": "781833456",
+        "serviceCode": "PAIEMENTMARCHANDOM"  
+        }
+    """
 
     if request.method == 'GET':
         return jsonify({'orders': orders_collection.count_documents({})})

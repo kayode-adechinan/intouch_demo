@@ -54,10 +54,16 @@ $ python test_transaction.py
 
 * Créer une commande
 ```bash
-$ /orders/
+/orders/
 ```
 
 * Spécifier un callback
 ```bash
-$ /transactions/
+/transactions/
 ```
+
+## Mode de paiement
+
+* PAIEMENTMARCHANDTIGO -> Tigo
+* SNPAIEMENTMARCHAND_EMONEY -> Expresso 
+* PAIEMENTMARCHANDOM -> Orange
