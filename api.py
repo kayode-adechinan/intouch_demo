@@ -28,8 +28,6 @@ def orders():
     """
         {
         "amount": 100,
-        "callback":
-            "https://1239d192.ngrok.io/transactions",  
         "recipientNumber": "781833456",
         "serviceCode": "PAIEMENTMARCHANDOM"  
         }
@@ -40,6 +38,7 @@ def orders():
 
     data = request.json
     data["idFromClient"] =  str(uuid.uuid4())
+    data["callback"] =  "https://1239d192.ngrok.io/transactions"
 
     req = requests.put(
         'https://dev-api.gutouch.com/dist/api/touchpayapi/v1/CPZ0829/transaction?loginAgent=4456987&passwordAgent=0000',
