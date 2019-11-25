@@ -54,13 +54,9 @@ $ python test_transaction.py
 
 * Créer une commande
 ```bash
-/orders/
+http://164.68.124.77:5151/orders/
 ```
 
-* Spécifier un callback
-```bash
-/transactions/
-```
 
 ## Mode de paiement
 
@@ -73,8 +69,6 @@ $ python test_transaction.py
 ```bash
 {
     "amount": 100,
-    "callback":
-        "https://1239d192.ngrok.io/transactions",  
     "recipientNumber": "781833456",
     "serviceCode": "PAIEMENTMARCHANDOM"  
 }
