@@ -6,6 +6,9 @@ from requests.auth import HTTPDigestAuth
 import uuid
 import pymongo
 from pymongo import MongoClient
+from flask_cors import CORS
+
+
 client = MongoClient('mongodb', 27017)
 db = client['api-database']
 
@@ -15,7 +18,7 @@ transactions_collection = db['transactions']
 
 
 app = Flask(__name__)
-
+CORS(app)
 
 @app.route('/')
 def index():
