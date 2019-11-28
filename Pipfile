@@ -14,6 +14,8 @@ yapf = "*"
 pymongo = "*"
 gunicorn = "*"
 flask-cors = "*"
+flask-pymongo = "*"
+bson = "*"
 
 [requires]
 python_version = "3.7"

@@ -57,6 +57,23 @@ $ python test_transaction.py
 http://164.68.124.77:5151/orders/
 ```
 
+* Vérifier le stats
+```bash
+http://164.68.124.77:5151/transactions?partner_transaction_id=d2c6db47-e99f-4f83-b822-0592aee7978e
+
+
+{
+  "service_id": "222555e",
+  "gu_transaction_id": "55544555",
+  "status": "OK",
+  "partner_transaction_id": "d2c6db47-e99f-4f83-b822-0592aee7978e",
+  "call_back_url": "lala",
+  "commission": "2.5"
+}
+
+
+```
+
 
 ## Mode de paiement
 

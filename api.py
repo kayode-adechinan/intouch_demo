@@ -5,6 +5,8 @@ import requests
 from requests.auth import HTTPDigestAuth
 import uuid
 import pymongo
+from bson.json_util import dumps
+from bson.objectid import ObjectId
 from pymongo import MongoClient
 from flask_cors import CORS
 
@@ -37,7 +39,10 @@ def orders():
     """
 
     if request.method == 'GET':
-        return jsonify({'orders': orders_collection.count_documents({})})
+        #return jsonify({'orders': orders_collection.count_documents({})})
+        #records_fetched = collection.find({key: value})
+	    return dumps(orders_collection.find())
+        
 
     data = request.json
     data["idFromClient"] =  str(uuid.uuid4())
@@ -71,13 +76,15 @@ def transactions():
     '''
 
     if request.method == 'GET':
-        return jsonify({'transactions': transactions_collection.count_documents({})})
+        partner_transaction_id = request.args.get("partner_transaction_id")
+        record_fetched = transactions_collection.find_one({"partner_transaction_id": partner_transaction_id})
+        return dumps(record_fetched)
 
     data = request.json
 
     transactions_collection.insert_one(data)
 
-    return jsonify({'data': request.json})
+    return jsonify({'data': dumps(request.json)})
 
 
 if __name__ == '__main__':
